@@ -4,28 +4,11 @@ const FIRST_LETTER = 'a';
 
 // Prevents the script from running before the DOM has loaded
 window.onload = function() {
+    var listener = new window.keypress.Listener();
 
     var notes = getAllNoteElements();
 
-    // Iterates through the notes array with each element being
-    // targeted by the element parameter
-    notes.forEach((element) => {
-        // Using an anonymous function as the callback to the listener
-        // so that we can use the element parameter passed into forEach
-        element.musicBox.addEventListener("click", (e) => {
-            // console.log(element.audio);
-            // element.sound = new Howl({
-            //     src: [
-            //         element.audio[0].src,
-            //         element.audio[1].src,
-            //         element.audio[2].src
-            //     ]
-            // });
-            element.audio.play();
-        });
-    })
-
-
+    attachNoteListeners(notes);
 }
 
 
@@ -65,4 +48,17 @@ function getAllNoteElements() {
     }
 
     return notes;
+}
+
+function attachNoteListeners(notes) {
+    // Iterates through the notes array with each element being
+    // targeted by the element parameter
+    notes.forEach((element, index) => {
+        // Using an anonymous function as the callback to the listener
+        // so that we can use the element parameter passed into forEach
+        element.musicBox.addEventListener("click", (e) => {
+            element.audio.play();
+        });
+
+    })
 }
