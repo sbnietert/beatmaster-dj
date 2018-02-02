@@ -4,8 +4,6 @@ const FIRST_LETTER = 'a';
 
 // Prevents the script from running before the DOM has loaded
 window.onload = function() {
-    var listener = new window.keypress.Listener();
-
     var notes = getAllNoteElements();
 
     attachNoteListeners(notes);
@@ -27,14 +25,26 @@ function getAllNoteElements() {
     var currentNoteID = null;
     var charCode = FIRST_LETTER.charCodeAt(0);
 
-    for (var i = 0; i < NUMBER_OF_NOTES; ++i) {
-        currentNoteID = String.fromCharCode(charCode + i);
+    // This will return an HTMLCollection of all the elements in the
+    // DOM with the class name "music-box"
+    var elements = document.getElementsByClassName("music-box");
 
-        var sounds = document.getElementById(currentNoteID + "Audio").getElementsByTagName('source');
+    // Since an HTMLCollection is an array-LIKE structure, but not an
+    // array, we have to make an array from elements in order to iterate
+    // over it with a .forEach()
+    Array.from(elements).forEach((element) => {
 
+        // This gets each of the groups of sound files and puts them
+        // into an array
+        var sounds = document.getElementById(element.id + "Audio")
+            .getElementsByTagName("source");
+
+        // We're combining all of the information for each note into an
+        // object so we can have a little more sanity with how we're
+        // storing all of our data!
         var noteObject = {
-            title: currentNoteID,
-            musicBox: document.getElementById(currentNoteID),
+            title: element.id,
+            musicBox: element,
             audio: new Howl({
                 src: [
                     sounds[0].src,
@@ -42,23 +52,29 @@ function getAllNoteElements() {
                     sounds[2].src,
                 ]
             })
-        };
+        }
 
         notes.push(noteObject);
-    }
+    });
 
     return notes;
 }
 
+/**
+ * Iterates through notes and attaches a "click" listener
+ * that plays the appropriate sound when the note box is
+ * clicked.
+ *
+ * @param  {Array} notes An array of all the note elements
+ */
 function attachNoteListeners(notes) {
     // Iterates through the notes array with each element being
     // targeted by the element parameter
-    notes.forEach((element, index) => {
+    notes.forEach((element) => {
         // Using an anonymous function as the callback to the listener
         // so that we can use the element parameter passed into forEach
         element.musicBox.addEventListener("click", (e) => {
             element.audio.play();
         });
-
     })
 }
