@@ -1,12 +1,15 @@
 // Constants will be in scope throughout the entire file.
 const NUMBER_OF_NOTES = 7;
 const FIRST_LETTER = 'a';
+var listener = new window.keypress.Listener();
 
 // Prevents the script from running before the DOM has loaded
 window.onload = function() {
     var notes = getAllNoteElements();
 
     attachNoteListeners(notes);
+
+    createKeyBindings(notes);
 }
 
 
@@ -77,4 +80,34 @@ function attachNoteListeners(notes) {
             element.audio.play();
         });
     })
+}
+
+function createKeyBindings(notes) {
+    listener.simple_combo("1", (event) => {
+        notes[event.key - 1].audio.play();
+    });
+
+    listener.simple_combo("2", (event) => {
+        notes[event.key - 1].audio.play();
+    });
+
+    listener.simple_combo("3", (event) => {
+        notes[event.key - 1].audio.play();
+    });
+
+    listener.simple_combo("4", (event) => {
+        notes[event.key - 1].audio.play();
+    });
+
+    listener.simple_combo("5", (event) => {
+        notes[event.key - 1].audio.play();
+    });
+
+    listener.simple_combo("6", (event) => {
+        notes[event.key - 1].audio.play();
+    });
+
+    listener.simple_combo("7", (event) => {
+        notes[event.key - 1].audio.play();
+    });
 }
