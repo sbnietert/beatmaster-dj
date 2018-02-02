@@ -1,0 +1,35 @@
+@import "_general-styles.css";
+@import "_header.css";
+@import "_description.css";
+@import "_instrument.css";
+@import "_individual-box-styles.css";
+
+/*
+    This file serves only as the consolidation point for all the CSS files.
+
+    Generally, you would use a bundler to take all these files and put them
+    into one file, but this is outside the scope of our topic! If you're
+    interested, check out Webpack at https://webpack.js.org!
+
+*/
+
+/*
+    Colors:
+
+    Black: #090D0C
+    Blue Black: #17211F
+    Dark Teal: #132F32
+    Light Teal: #336179
+    Light Gray: #9CBFCF
+    Blizzard Blue: #B6DFF1
+    Neon Blue: #1AD9E0
+
+*/
+
+/*
+    Fonts:
+
+    font-family: 'Righteous', sans-serif;
+    font-family: 'Jura', sans-serif;
+
+*/

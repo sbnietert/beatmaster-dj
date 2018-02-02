@@ -1,0 +1,32 @@
+.instrument {
+    display: flex;
+    flex-direction: row;
+    grid-area: music;
+}
+
+.instrument > .music-box {
+    align-items: center;
+    display: flex;
+    height: 8vw;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: background-color 200ms ease;
+    width: 8vw;
+
+    /* Make the text unselectable! */
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.instrument > .music-box > h3 {
+    color: #fff;
+}

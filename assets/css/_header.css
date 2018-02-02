@@ -1,0 +1,22 @@
+/* This holds the header-bar of the web app */
+.header {
+    align-items: center;
+    background-color: #17211F;
+    border-bottom: 1px solid #1AD9E0;
+    display: flex;
+    grid-area: header;
+    height: 10vh;
+    justify-content: center;
+    /* opacity: 0.4; */
+}
+
+/*
+    This specifies that this rule is only for direct children
+    of .header, and that those children have to be h1 elements
+*/
+.header > h1 {
+    color: #1AD9E0;
+    font-family: 'Righteous', sans-serif;
+    font-size: 2.5em;
+    opacity: 1;
+}

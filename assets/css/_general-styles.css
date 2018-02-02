@@ -1,0 +1,28 @@
+body {
+    background-color: #090D0C;
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden-audio {
+    display: none;
+}
+
+/* This holds the main content of the web app */
+.container {
+    display: grid;
+
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header"
+        "...... body   ......"
+        "...... music  ......"
+        "footer footer footer";
+    grid-row-gap: 5vh;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

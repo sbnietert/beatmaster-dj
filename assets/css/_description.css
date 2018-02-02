@@ -1,0 +1,8 @@
+.description {
+    align-items: center;
+    color: #1AD9E0;
+    display: flex;
+    grid-area: body;
+    justify-content: center;
+    text-align: center;
+}
