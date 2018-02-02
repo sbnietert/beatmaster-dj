@@ -1,4 +1,4 @@
-# DJ App
+# BeatMaster DJ
 ## Become the DJ you were meant to be--right in your web browser!
 
 
