@@ -1,6 +1,19 @@
 # BeatMaster DJ
 ## Become the DJ you were meant to be--right in your web browser!
 
+### Piece by Piece
+
+1. Text Content & Basic HTML
+    * https://jsfiddle.net/sbnietert/1fnso00o/1/
+    * Useful documentation: https://developer.mozilla.org/en-US/docs/Web/HTML
+
+2. Basic CSS
+    * https://jsfiddle.net/sbnietert/1fnso00o/4/
+    * Useful documentation: https://developer.mozilla.org/en-US/docs/Web/CSS
+
+3. Music Keys
+    * https://jsfiddle.net/sbnietert/1fnso00o/7/
+    * Useful documentation: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 ### Installation Requirements:
 * You have NPM installed on your system (https://nodejs.org/en/)
