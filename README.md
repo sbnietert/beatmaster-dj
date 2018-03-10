@@ -17,7 +17,7 @@
 
 ### Installation Requirements:
 * Git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-    * Alternatively, desktop GitHub client (CLIhttps://desktop.github.com/)
+    * Alternatively, desktop GitHub client (https://desktop.github.com/)
 * Node & NPM (https://nodejs.org/en/)
 * Current web browser
 
