@@ -1,7 +1,7 @@
 # BeatMaster DJ
 ## Become the DJ you were meant to be--right in your web browser!
 
-### Piece by Piece
+### Setting the Stage
 
 1. Text Content & Basic HTML
     * https://jsfiddle.net/sbnietert/1fnso00o/1/
@@ -16,8 +16,10 @@
     * Useful documentation: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 
 ### Installation Requirements:
-* You have NPM installed on your system (https://nodejs.org/en/)
-* You have a current web browser installed on your system
+* Git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+    * Alternatively, desktop GitHub client (CLIhttps://desktop.github.com/)
+* Node & NPM (https://nodejs.org/en/)
+* Current web browser
 
 
 ### Installation Guide (\*nix systems):
